@@ -115,7 +115,7 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
 
             var expected = new DiagnosticResult
             {
-                Id = "AnalyzerSpike",
+                Id = "ArdalisApiEndpointAnalyzer",
                 Message = String.Format("Type '{0}' inherits from ApiEndpoint and has more than one public method", "TypeName"),
                 Severity = DiagnosticSeverity.Warning,
                 Locations =
