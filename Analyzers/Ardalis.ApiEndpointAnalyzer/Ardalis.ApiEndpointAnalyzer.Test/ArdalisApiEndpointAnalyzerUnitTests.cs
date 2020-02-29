@@ -24,7 +24,7 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
 
     namespace ConsoleApplication1
     {
-        public class TypeName : RickHodder.ApiEndpoint
+        public class TypeName : Ardalis.ApiEndpoints.BaseEndpoint<string>
         {   
             public void OneMethod()
             {
@@ -32,12 +32,15 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
         }
     }
 
-    namespace RickHodder
+    namespace Ardalis.ApiEndpoints
     {
-        public class ApiEndpoint
+        public class BaseEndpoint<A,B>
         {
         }
-    }
+        public class BaseEndpoint<A>
+        {
+        }  
+}
 ";
             VerifyCSharpDiagnostic(test);
 
@@ -56,7 +59,7 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
 
     namespace ConsoleApplication1
     {
-        public class TypeName : RickHodder.ApiEndpoint
+        public class TypeName : Ardalis.ApiEndpoints.BaseEndpoint<string>
         {   
             public TypeName()
             {
@@ -68,9 +71,12 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
         }
     }
 
-    namespace RickHodder
+    namespace Ardalis.ApiEndpoints
     {
-        public class ApiEndpoint
+        public class BaseEndpoint<A,B>
+        {
+        }
+        public class BaseEndpoint<A>
         {
         }
     }
@@ -92,7 +98,7 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
 
     namespace ConsoleApplication1
     {
-        public class TypeName : RickHodder.ApiEndpoint
+        public class TypeName : Ardalis.ApiEndpoints.BaseEndpoint<string>
         {   
             public void OneMethod()
             {
@@ -105,9 +111,12 @@ namespace Ardalis.ApiEndpointAnalyzer.Test
         }
     }
 
-    namespace RickHodder
+    namespace Ardalis.ApiEndpoints
     {
-        public class ApiEndpoint
+        public class BaseEndpoint<A,B>
+        {
+        }
+        public class BaseEndpoint<A>
         {
         }
     }

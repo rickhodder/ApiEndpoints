@@ -38,7 +38,9 @@ namespace Ardalis.ApiEndpointAnalyzer
 
             var namedTypeSymbol = (INamedTypeSymbol)context.Symbol;
 
-            var typeSymbol = context.Compilation.GetTypeByMetadataName("RickHodder.ApiEndpoint");
+            //var typeSymbol = context.Compilation.GetTypeByMetadataName("RickHodder.ApiEndpoint");
+            //Ardalis.ApiEndpoints.BaseEndpoint
+            var typeSymbol = context.Compilation.GetTypeByMetadataName("Ardalis.ApiEndpoints.BaseEndpoint");
 
             if (typeSymbol == null)
                 return;
